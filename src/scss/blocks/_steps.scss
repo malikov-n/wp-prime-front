@@ -1,0 +1,175 @@
+.steps {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 150px;
+  height: 132vh;
+  min-height: 1070px;
+  max-width: 1920px;
+  margin: -30px auto 0;
+  background-color: #DEE8EC;
+  position: relative;
+
+    picture {
+      position: absolute;
+      inset: 0;
+      
+      img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        object-position: center;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      min-height: 1200px;
+    }
+
+  @include tablet {
+      margin-top: 0;
+      height: 902px;
+      padding-top: 90px;
+      min-height: auto;
+  }
+
+  @include mobile {
+              margin-top: -10px;
+        height: 714px;
+        padding-top: 70px;
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: 621px;
+    text-align: center;
+
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    position: relative;
+    top: 65px;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      position: relative;
+      top: 77%;
+    }
+
+    @include min {
+        display: none;
+    }
+
+  }
+  &__cards-mobile {
+    display: none;
+    @include min {
+        display: block;
+        position: relative;
+        top: 10%;
+    }
+  }
+
+  &__slider-wrapper {
+    height: 100% !important;
+    .swiper-slide {
+      height: auto;
+    }
+  }
+
+  &__slider-slide {
+    height: auto !important;
+  }
+
+  &__card {
+    border: 1px solid rgba(45, 67, 77, 0.11);
+    border-radius: 10px;
+    background-color: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 100% !important;
+    justify-content: space-between;
+
+    @include tablet {
+        gap: 45px;
+    }
+
+    @include mobile {
+        
+    }
+  }
+
+  &__card-num {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 92%;
+    letter-spacing: -0.03em;
+    color: rgba(66, 96, 106, 0.36);
+    border: 0.69px solid rgba(45, 67, 77, 0.36);
+    border-radius: 34px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__card-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 92%;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+  }
+
+  &__card-description {
+    max-width: 292px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(45, 67, 77, 0.65);
+
+    @include mobile {
+        max-width: 100%;
+    }
+  }
+
+  &__card--accent {
+    background-image: linear-gradient(360deg, #42606a 0%, #609aad 100%);
+    .steps__card-num {
+      color: rgba(255, 255, 255, 0.36);
+      border: 0.69px solid rgba(255, 255, 255, 0.36);
+    }
+
+    .steps__card-title {
+      color: var(--white);
+    }
+    
+    .steps__card-description {
+      color: var(--white);
+    }
+  }
+}

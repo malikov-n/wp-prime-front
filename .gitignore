@@ -15,7 +15,7 @@
 /auth.json
 /vendor
 
-/composer.lock
-public/wp-content/themes/detox/node_modules
-public/wp-content/themes/detox/package-lock.json
-public/wp-content/themes/detox/.nvmrc
+node_modules
+package-lock.json
+
+.webp

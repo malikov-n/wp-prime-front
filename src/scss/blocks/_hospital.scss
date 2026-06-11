@@ -1,0 +1,195 @@
+.hospital {
+  background-color: #dee8ec;
+  padding-top: 215px;
+  margin-bottom: 0;
+  padding-bottom: 150px;
+
+  @include tablet {
+      padding-top: 780px;
+  }
+
+  @include min {
+      padding-top: 200px;
+  }
+  &__title {
+    max-width: 578px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    @include tablet {
+      grid-column: span 2;
+        
+    }
+  }
+
+  &__card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include tablet {
+      gap: 40px;
+    }
+
+    @include mobile {
+        padding: 10px;
+    }
+  }
+
+  &__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__card-caption {
+    padding: 10px 15px;
+    font-weight: 500;
+    font-size: clamp(10px, 1vw, 14px);
+    line-height: 110%;
+    text-align: center;
+    color: rgba(45, 67, 77, 0.62);
+    border: 1px solid rgba(66, 96, 106, 0.11);
+    border-radius: 91px;
+    background-color: #f2f7ff;
+
+    @include mobile {
+        padding: 7px;
+    }
+  }
+
+  &__card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 0.69px solid rgba(45, 67, 77, 0.36);
+    border-radius: 50%;
+
+    @include mobile {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+    }
+  }
+
+  &__card-description {
+    font-size: 14px;
+    line-height: 140%;
+    color: #2d434d;
+    max-width: 187px;
+
+    @include mobile {
+        font-size: 12px;
+        max-width: 100%;
+    }
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: calc(100% - 10px);
+    overflow: hidden;
+
+    @include tablet {
+      grid-column: span 2;
+      max-width: 100%;
+        
+    }
+
+    @include mobile {
+        padding: 5px;
+    }
+
+    .swiper-wrapper {
+      height: 100% !important;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  &__slide {
+    height: 100% !important;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 100%;
+      object-fit: cover;
+      max-height: 456px;
+      object-position: center;
+    }
+  }
+
+  &__slider-arrow {
+    // position: absolute !important;
+    width: 45px !important;
+    height: 45px !important;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    svg {
+      width: 9px !important;
+      height: 18px !important;
+    }
+
+      &:hover {
+    background-color: var(--accent-second);
+  }
+  &:active {
+    background-color: var(--accent);
+  }
+
+  svg {
+    width: 11px;
+    height: 19px;
+  }
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    @include mobile {
+        left: 15px;
+    }
+  }
+
+  .swiper-button-next {
+    right: 20px;
+    @include mobile {
+        right: 15px;
+    }
+  }
+}

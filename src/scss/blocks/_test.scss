@@ -1,0 +1,137 @@
+.test {
+  background-color: #e0e9ed;
+  position: relative; 
+  margin-bottom: 0;
+  padding-bottom: 150px;
+  @include mobile {
+    padding-bottom: 100px;
+  }
+  &::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(90deg, #e0e9ed 0%, #dde7eb 100%);
+  }
+  &__inner {
+    position: relative;
+    z-index: 3;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+
+    picture {
+      position: absolute;
+      inset: 0;
+      
+      img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        object-position: right 0;
+
+        @include tablet {
+            object-position: bottom right;
+        }
+
+        @include min {
+            object-position: bottom;
+        }
+      }
+    }
+
+
+
+    @include tablet {
+            height: 60vh;
+        max-height: 100%;
+        min-height: 750px;
+    }
+
+    @include mobile {
+      min-height: 650px;
+      height: 78vh;
+    }
+  }
+
+  &__content-box {
+    position: relative;
+    max-width: 565px;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1400px) {
+        min-height: 550px;
+        max-height: 100%;
+    }
+
+    @include tablet {
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: max-content;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 42px;
+
+    @include tablet {
+        margin-bottom: 15px;
+    font-size: 30px;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(45, 67, 77, 0.62);
+    margin-bottom: 60px;
+    @include tablet {
+        margin-bottom: 50px;
+    }
+  }
+
+  &__btn {
+    min-width: 205px;
+    margin-top: auto;
+    justify-self: end;
+    align-self: flex-start;
+    padding: 15px 60px 15px 20px;
+    
+    @include mobile {
+      padding: 15px 60px 15px 35px;
+        
+    }
+    &:hover {
+      background-color: var(--accent-second);
+      color: var(--white);
+      span {
+        background-color: var(--white);
+        svg line {
+          stroke: var(--accent)
+        }
+      }
+    }
+    &:active {
+      background-color: var(--accent);
+      span {
+        background-color: var(--white);
+        }
+      }
+    }
+  }
+

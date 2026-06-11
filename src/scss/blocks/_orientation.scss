@@ -1,0 +1,140 @@
+.orientation {
+  &__slider {
+    overflow: visible !important;
+  }
+
+  &__slider-wrapper {
+    height: 100% !important;
+    padding: 0 10px;
+  }
+
+  &__slider-slide {
+    flex: 40% 1 0;
+
+    @include tablet {
+        flex: auto 1 0;
+    }
+
+    @include min {
+        width: 98% !important; 
+    }
+
+    @include min {
+        // flex: 91% 1 0;
+            // max-width: 91%;
+    }
+  }
+
+
+  .slider-title {
+    span {
+      display: block;
+    }
+
+    @include min {
+        text-align: center;
+        margin: 0 auto;
+    }
+  }
+
+  .swiper-slide {
+    height: auto !important;
+  }
+
+  &__slide {
+    border: 1px solid rgba(66, 96, 106, 0.11);
+    border-radius: 10px;
+    background-color: var(--white);
+    padding: 6px 14px 18px 10px;
+    height: 100%;
+  }
+
+  
+  &__slide-imgbox {
+    max-height: 340px;
+    overflow: hidden;
+    border-radius: 10px;
+    // height: 100%;
+    margin-bottom: 22px;
+    
+    @include tablet {
+      // max-height: 225px;
+    }
+  }
+
+  &__slide-img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+
+    @include min {
+        min-height: 125px;
+    }
+  }
+
+  &__slide-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+  &__slide-title {
+    max-width: 332px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 92%;
+    letter-spacing: -0.03em;
+    color: #42606a;
+  }
+
+  &__slide-icon-wrapper {
+    border: 0.69px solid rgba(66, 96, 106, 0.36);
+    border-radius: 34px;
+    padding: 7px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__slide-icon {
+    flex: auto 0 0;
+  }
+
+  &__slide-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 142%;
+    color: rgba(45, 67, 77, 0.65);
+    padding: 0 8px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static !important;
+
+    @include min {
+        display: none;
+    }
+  }
+
+  &__pagination {
+    display: none;
+    position: static !important;
+    margin-top: 10px !important;
+
+    @include min {
+        display: block;
+    }
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}

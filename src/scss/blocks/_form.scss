@@ -1,0 +1,114 @@
+.modal-form {
+    .modal__inner {
+        max-width: 440px;
+
+        @include min {
+            padding: 35px 20px;
+        }
+
+        .modal__top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto 30px;
+
+            h2 {
+                font-size: 30px;
+                color: var(--accent);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                text-align: center;
+                color: rgba(66, 96, 106, 0.62);
+                opacity: .9;
+                max-width: 311px;
+            }
+        }
+
+        .form-popup {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            span {
+                opacity: .6;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                color: #272c34;
+            }
+
+            input {
+                width: 100%;
+                border-radius: 95px;
+                padding: 15px 14px;
+                max-width: 100%;
+                min-height: 50px;
+                background: #efefef;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                color: #272c34;
+            }
+        }
+
+        .form__label {
+            align-items: center;
+            gap: 10px;
+        }
+        .form__label:nth-child(1) {
+            margin-top: 10px; 
+        }
+        .form__caption {                
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            color: #272c34;
+            opacity: .9;
+
+            @include min {
+                font-size: 10px;
+            }
+        }
+
+        .form__checkmark {
+            border: none;
+            border-radius: 4px;
+            position: relative;
+            transition: all 0.3s ease;
+            width: 20px;
+            height: 20px;
+            background: #efefef;
+            flex-shrink: 0;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 7px;
+                top: 3px;
+                width: 6px;
+                height: 11px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg) scale(0);
+                transition: transform 0.2s ease;
+            }
+        }
+
+        .form__checkbox:checked + .form__checkmark::after {
+            transform: rotate(45deg) scale(1);
+        }
+
+        .btn {
+            width: 100%;
+            &:hover {
+                background-color: var(--accent-second);
+                color: var(--white);
+            }
+        }
+    }
+}

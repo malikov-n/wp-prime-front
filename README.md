@@ -15,3 +15,24 @@ url = git@github.com:
 ~~~
 url = git@github-second:
 ~~~
+
+### installation
+
+```
+npm i
+```
+
+Зпустить в режиме разработки:
+```
+gulp
+```
+
+Собрать версию для публикации:
+```
+gulp docs
+```
+
+на винде так
+```
+npx gulp docs
+```

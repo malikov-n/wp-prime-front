@@ -1,0 +1,154 @@
+.header {
+  position: fixed;
+  top: 18px;
+  left: 15px;
+  right: 15px;
+  z-index: 100;
+  margin: 0 auto;
+  transition: all .4s cubic-bezier(0,0,.8,1);
+
+  @include mobile {
+            left: 6px;
+        right: 6px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #c8c8c8;
+    border-radius: 509px;
+    backdrop-filter: blur(11.100000381469727px);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  &__logo {
+    img {
+      min-width: 108px;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    li a {
+      font-weight: 400;
+      font-size: clamp(12px, 1vw, 16px);
+      color: var(--accent);
+      transition: all .3s ease-in-out;
+      &:hover {
+        color: #6298aa;
+      }
+
+      &:active {
+        color: var(--accent);
+      }
+    }
+
+    @include tablet {
+        display: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+
+  &__btn {
+    padding: 10px 40px 10px 14px;
+    font-size: 12px;
+    span {
+      width: 28px;
+      height: 28px;
+      top: 4px;
+      right: 4px;
+    }
+
+    @include mobile {
+        display: none;
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: var(--accent);
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: #6298aa;
+    }
+
+    &:active {
+      color: var(--accent);
+    }
+
+            @include mobile {
+        display: none;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    li a {
+      border-radius: 21px;
+      width: 28px;
+      height: 28px;
+      background-color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+      background-color: var(--accent);
+      svg path {
+        fill: var(--white)
+      }
+      
+    }
+
+    &:active {
+      background-color: var(--white);
+      svg path {
+        fill: var(--white)
+      }
+    }
+    }
+
+        @include tablet {
+        display: none;
+    }
+  }
+
+  .burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--accent);
+    width: 37px;
+    height: 37px;
+    margin-left: 2px;
+    @include tablet {
+        display: flex;
+    }
+  }
+}

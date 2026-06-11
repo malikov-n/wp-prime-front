@@ -1,0 +1,65 @@
+.none {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+  color: inherit !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.line {
+  overflow: hidden;
+  padding: 9px 4px 0 0;
+}
+
+.title-fade {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 9px 5px 0 0px;
+
+  @include tablet {
+    padding: 9px 5px 0 0px;
+  }
+}
+
+.hide-menu {
+  transform: translateY(-200%);
+}

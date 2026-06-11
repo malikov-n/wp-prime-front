@@ -1,0 +1,30 @@
+.gallery {
+  margin-bottom: 0;
+  padding-bottom: 150px;
+  background-color: #dee8ec;
+
+  @include mobile {
+      padding-bottom: 100px;
+  }
+
+  .slider-top {
+    @include min {
+        margin-bottom: 40px;
+    }
+  }
+  &__slider-slide {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  &__slider-slide {
+    max-height: 303px;
+    height: auto !important;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+}

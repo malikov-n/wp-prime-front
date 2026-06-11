@@ -1,0 +1,228 @@
+.services-patients {
+  margin-bottom: 0;
+  padding-bottom: 150px;
+  position: relative;
+  background-image: linear-gradient(179deg, #f4f7f8 0%, #dce6ea 100%);
+  &::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #E0E9ED;
+  }
+
+  @include min {
+      padding-bottom: 100px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 50px;
+    padding: 0 10px;
+
+    @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    @include mobile {
+        margin-bottom: 40px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include mobile {
+      // display: grid;
+      // grid-template-columns: 1fr 1fr;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__tab {
+    cursor: pointer;
+    padding: 15px 27px;
+    border-radius: 45px;
+    background-color: var(--white);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    transition: all 0.3s ease;
+    min-width: 128px;
+    text-align: center;
+
+    @include tablet {
+        padding: 14px 16px;
+    }
+
+    @include mobile {
+        flex: 1 1 auto;
+    }
+
+    &:hover {
+      background-color: var(--accent);
+      color: var(--white);
+    }
+
+
+    &.active {
+      background-color: var(--accent);
+      color: var(--white);
+    }
+  }
+
+  &__grid {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @include min {
+      grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+      display: grid;
+    }
+  }
+
+  &__card {
+    background-color: var(--white);
+    border: 1px solid rgba(45, 67, 77, 0.11);
+    border-radius: 10px;
+    padding: 10px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+
+    @include min {
+        padding: 5px;
+    }
+  }
+  
+  &__card-img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-height: 210px;
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+
+    @media (min-width: 1400px) {
+      max-height: 310px;
+    }
+  }
+
+  &__card-info {
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    @include tablet {
+        margin-bottom: 30px;
+    }
+
+    @include min {
+      margin-bottom: 20px;
+      padding: 0;
+    }
+  }
+
+  &__card-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 92%;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+    margin-top: 10px;
+
+
+    @include min {
+        font-size: 16px;
+    }
+  }
+  &__card-description {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(45, 67, 77, 0.62);
+
+    @include tablet {
+        font-size: 12px;
+    }
+
+    @include mobile {
+        margin-top: 3px;
+    }
+  }
+
+  &__card-btn-wrapper {
+    padding: 0 10px;
+    margin-top: auto;
+
+    @include min {
+        padding: 0;
+    }
+  }
+
+  &__card-btn {
+    width: 100%;
+    padding: 15px 60px 15px 35px;
+    
+    @include tablet {
+      padding: 15px 60px 15px 35px;
+    }
+    
+    @include mobile {
+      padding: 15px 60px 15px 20px;
+    }
+    
+    @include min {
+      padding: 15px 60px 15px 36px;
+      font-size: 12px;
+    }
+    &:hover {
+      background-color: var(--accent-second);
+      color: var(--white);
+      span {
+        background-color: var(--white);
+
+        svg line {
+          stroke: var(--accent)
+        }
+      }
+    }
+    &:active {
+      background-color: var(--accent);
+    }
+  }
+}
