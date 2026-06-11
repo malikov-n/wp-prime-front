@@ -5,13 +5,13 @@ GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519_github_second -o IdentitiesOnly=yes' g
 ~~~
 
 ~~~
-nano ~/.ssh/config
+nano .git/config
 ~~~
-
+и поменять
 ~~~
-Host github-second
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_github_second
-    IdentitiesOnly yes
+url = git@github.com:
+~~~
+на
+~~~
+url = git@github-second:
 ~~~
