@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ПРАЙМ Медицинский центр | 404</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.5.0/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+	<link rel="preload" href="../fonts/InterTight-Light.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="../fonts/InterTight-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="../fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="../fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main>
+		<div class="error-main">
+			<div class="container-full">
+				<div class="error-main__inner">
+					<h1>Страница не найдена</h1>
+					<p>
+						Страница, которую вы ищете, не найдена. Возможно, она была удалена или адрес введён неправильно.
+					</p>
+				<a href="/" class="btn error-main__btn">
+					Перейти на главную
+					<span>
+					<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<line x1="6.95653" y1="0.5" x2="6.95653" y2="13.587" stroke="#42606A" stroke-linecap="round" />
+						<line x1="0.5" y1="6.54297" x2="13" y2="6.54297" stroke="#42606A" stroke-linecap="round" />
+					</svg>
+					</span>
+                </a>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include('blocks/footer.html')
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.5.0/build/js/intlTelInput.min.js"></script>
+	<script src="https://unpkg.com/imask"></script>
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

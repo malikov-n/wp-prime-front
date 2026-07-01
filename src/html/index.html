@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ПРАЙМ Медицинский центр | Главная страница</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.5.0/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+	<link rel="preload" href="../fonts/InterTight-Light.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="../fonts/InterTight-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="../fonts/InterTight-Medium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="../fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main>
+		@@include('blocks/main-screen.html')
+		@@include('blocks/benefits.html')
+		@@include('blocks/orientation.html')
+		@@include('blocks/services.html')
+		@@include('blocks/services-patients.html')
+		@@include('blocks/test.html')
+		@@include('blocks/doctors.html')
+		@@include('blocks/cta.html')
+		@@include('blocks/steps.html')
+		@@include('blocks/hospital.html')
+		@@include('blocks/reviews.html')
+		@@include('blocks/gallery.html')
+		@@include('blocks/faq.html')
+		@@include('blocks/form-bottom.html')
+	</main>
+	@@include('blocks/footer.html')
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.5.0/build/js/intlTelInput.min.js"></script>
+	<script src="https://unpkg.com/imask"></script>
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>
