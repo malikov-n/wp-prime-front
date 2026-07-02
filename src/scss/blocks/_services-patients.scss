@@ -143,15 +143,15 @@
   }
 
   &__card-info {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     padding: 0 20px;
 
     @include tablet {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
     }
 
     @include min {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       padding: 0;
     }
   }
@@ -181,7 +181,26 @@
     }
 
     @include mobile {
-        margin-top: 3px;
+      margin-top: 3px;
+    }
+  }
+
+  &__card-price {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--accent-second);
+
+    @include tablet {
+        font-size: 16px;
+    }
+
+    @include min {
+      padding: 0;
+      margin-bottom: 16px;
+      font-size: 14px;
     }
   }
 
