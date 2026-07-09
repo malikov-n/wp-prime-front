@@ -104,38 +104,6 @@ const gallerySlider = new Swiper(".gallery__slider", {
   }
 });
 
-//ЛИПКАЯ ШАПКА
-const threshold = 100;
-const scrollMenu = document.querySelector(".header");
-if (scrollMenu) {
-  let lastScrollTop = 0;
-  let scrollDistance = 0;
-  let ticking = false;
-  function updateScrollState() {
-    const currentScrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScrollTop > lastScrollTop) {
-      scrollDistance += currentScrollTop - lastScrollTop;
-      if (scrollDistance > threshold) {
-        scrollMenu.classList.add("hide-menu");
-      }
-    } else {
-      scrollMenu.classList.remove("hide-menu");
-      scrollDistance = 0;
-    }
-    lastScrollTop = currentScrollTop;
-    ticking = false;
-  }
-  
-  function handleScroll() {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollState);
-      ticking = true;
-    }
-  }
-  window.addEventListener("scroll", handleScroll);
-}
-
 //POPUP HEADER
 document.addEventListener("DOMContentLoaded", function() {
   const burger = document.querySelector(".burger");
